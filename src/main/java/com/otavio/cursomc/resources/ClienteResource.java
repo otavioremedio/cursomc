@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.otavio.cursomc.services.CategoriaService;
+import com.otavio.cursomc.services.ClienteService;
 
 @RestController
-@RequestMapping(value="/categorias")
-public class CategoriaResource {
+@RequestMapping(value="/clientes")
+public class ClienteResource {
 	
 	@Autowired
-	private CategoriaService service;
+	private ClienteService service;
 	
 	@GetMapping(value="/{id}")
 	public ResponseEntity<?> listar(@PathVariable Integer id){
